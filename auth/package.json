@@ -11,17 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",
-    "bookshelf": "^1.2.0",
     "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "jsonwebtoken": "^8.5.1",
-    "knex": "^0.21.2",
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^9.1.0",
     "koa-yup-validator": "^1.0.7",
     "mongoose": "^5.9.23",
-    "mysql": "^2.18.1",
     "yup": "^0.29.1"
   }
 }
