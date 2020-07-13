@@ -1,6 +1,8 @@
 import * as Yup from "yup";
 import { hash } from "bcrypt";
-import { User } from "./mysql";
+import mongoose from "mongoose";
+
+const Users = mongoose.model("Users");
 
 export const schema = Yup.object().shape({
   email: Yup.string().email().required(),
@@ -10,7 +12,7 @@ export const schema = Yup.object().shape({
 });
 
 const createUser = ({ email, password }) =>
-  User.forge({ email, password }).save();
+  Users.create({ email, password });
 
 export const handler = async (ctx) => {
   const email = ctx.request.body.email.toLowerCase();

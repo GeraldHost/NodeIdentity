@@ -20,6 +20,7 @@
     "koa-bodyparser": "^4.3.0",
     "koa-router": "^9.1.0",
     "koa-yup-validator": "^1.0.7",
+    "mongoose": "^5.9.23",
     "mysql": "^2.18.1",
     "yup": "^0.29.1"
   }
