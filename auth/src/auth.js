@@ -15,5 +15,4 @@ export const handler = (ctx) => {
       code: error.code,
     };
   }
-  console.log("auth handler");
 };

@@ -26,7 +26,7 @@ router
   .get("/", validator(authSchema, { path: "request.query" }), authHandler);
 
 export const startWebServer = () => {
-  const port = 3000;
+  const port = process.env.PORT || 80;
   console.log("auth web server started on port: " + port);
   app.use(router.routes()).use(router.allowedMethods());
   app.listen(port);
