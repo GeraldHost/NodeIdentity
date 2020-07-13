@@ -1,0 +1,24 @@
+{
+  "name": "screening",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bookshelf": "^1.2.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "knex": "^0.21.2",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.1.0",
+    "koa-yup-validator": "^1.0.7",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.0",
+    "yup": "^0.29.1"
+  }
+}
