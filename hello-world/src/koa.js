@@ -12,12 +12,12 @@ export const startWebServer = () => {
   const router = new Router();
 
   const helloWorld = (ctx) => {
-    ctx.body = "hello auth";
+    ctx.body = "hello world";
   };
 
   router
     .get("/status", helloWorld)
-    .get("/", authMiddleware, helloWorld);
+    .get("/", authMiddleware, helloWorld)
 
   const port = process.env.PORT || 80;
   console.log("auth web server started on port: " + port);
