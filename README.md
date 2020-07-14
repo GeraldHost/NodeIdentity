@@ -1,4 +1,4 @@
-# NodeIdp
+# Node Identity Provider
 
 Simple node microservice IDP
 
