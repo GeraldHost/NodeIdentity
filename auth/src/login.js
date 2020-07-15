@@ -28,24 +28,21 @@ export const handler = async (ctx) => {
       password,
       user.get("password")
     );
-    if (validPassword) {
-      const token = jwt.sign(
-        {
-          data: { user_id: user.get("id") },
-        },
-        process.env.JWT_SECRET,
-        { expiresIn: 60 * 60 * 24 * 90 }
-      );
-      const { password: _, ...userWithoutPassword } = user.toJSON();
-      ctx.body = {
-        user: userWithoutPassword,
-        token,
-      };
-    } else {
-      ctx.body = {
-        error: "invalid password",
-      };
+    if (!validPassword) {
+      throw new Error("invalid password");
     }
+    const token = jwt.sign(
+      {
+        data: { user_id: user.get("id") },
+      },
+      process.env.JWT_SECRET,
+      { expiresIn: 60 * 60 * 24 * 90 }
+    );
+    const { password: _, ...userWithoutPassword } = user.toJSON();
+    ctx.body = {
+      user: userWithoutPassword,
+      token,
+    };
   } catch (error) {
     ctx.body = {
       error: error.message,
