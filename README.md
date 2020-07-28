@@ -1,9 +1,10 @@
-# Node Identity Provider
+# Polygloy Identity Provider
 
-Simple node microservice IDP
+Simple IDP services written in different languages
 
-## /auth 
-node app with `/login`, `/register` and `/?token=<token>` endpoints
+## /auth
+
+The auth endpoint for each auth app should support: `/login`, `/register` and `/?token=<token>` endpoints
 
 ## /hello-world
-node app with authentication middleware
+test the auth services with this node app.
