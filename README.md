@@ -1,4 +1,4 @@
-# Polygloy Identity Provider
+# Polyglot Identity Provider
 
 Simple IDP services written in different languages
 
